@@ -1,0 +1,47 @@
+{
+  "name": "vscode-exstension-demo",
+  "version": "1.0.0",
+  "description": "vscode exstension demo",
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/eriksyuan/vscode-exstension-demo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eriksyuan/vscode-exstension-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eriksyuan/vscode-exstension-demo/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/index.js",
+  "engines": {
+    "vscode": "^1.68.0"
+  },
+
+  "activationEvents": [
+    "onCommand:demo.helloWorld"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "demo.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@eriksyuan/eslint-config-ts": "^0.1.2",
+    "eslint": "^8.19.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.68.1",
+    "tsup": "^6.1.3"
+  }
+}
